@@ -128,7 +128,8 @@
                lines ...))]))
 
 (define (is-py-begin? thing)
-  (eq? 'do (first thing)))
+  (and (not (empty? thing))
+       (eq? 'do (first thing))))
 
 (define (append-py a b)
   (cond [(and (is-py-begin? a) (is-py-begin? b)) (append (rest a) (rest b))]
