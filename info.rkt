@@ -3,3 +3,4 @@
 
 ;(define scribblings '(("python-to-racket.scrbl" ())))
 
+(define deps '("base"))
